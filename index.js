@@ -1,5 +1,10 @@
-let names = ['Sebi', 'Andrei', 'Lucian', 'Raul', 'Ema'];
+let user = {
+    name: 'Sebastian',
+    email: 'sleam.sebi@yahoo.com',
+    gender: 'male',
+    getDetails: function() {
+        console.log(`Name: ${user.name}, Email: ${user.email}, Gender: ${user.gender}`);
+    }
+};
 
-const displayNames = (name, index) => console.log(name, index)
-
-names.forEach(displayNames);
+user.getDetails();
