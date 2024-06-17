@@ -1,9 +1,19 @@
-// let element = document.querySelector('b#this_is_id')
-// let element = document.querySelector('div').querySelector('.para')
-let elements = document.querySelectorAll('p')
+// let elements = [0, 20, 15, 35, 23, 66, 44]
 
-console.log('element: ', elements)
+// let even_numbers = elements.filter(number => {
+//     return number % 2 == 0;
+// });
 
-elements.forEach(element => {
-    console.log(element)
-})
+let numbers = [
+    {numbers: 12, type: "even"},
+    {numbers: 6, type: "even"},
+    {numbers: 0, type: "even"},
+    {numbers: 2, type: "even"},
+    {numbers: 5, type: "odd"},
+    {numbers: 27, type: "odd"},
+    {numbers: 59, type: "odd"}
+]
+
+let even_numbers = numbers.filter(number => number.type == "even");
+
+console.log(elements);
