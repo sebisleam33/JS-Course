@@ -1,8 +1,13 @@
 let numbers = [0, 10, 5, 27, 3, 10, 12]
 
-let sq_numbers = numbers.map(number => number * number);
+let result1 = numbers.reduce((counter, current) => {
+    if(current % 5 == 0) {
+        counter += 1;
+    }
+    return counter;
+}, 0);
 
-// console.log(sq_numbers, numbers);
+console.log(result1);
 
 let numbers_pair = [
     {number: 12, type: "square"},
@@ -12,12 +17,11 @@ let numbers_pair = [
     {number: 59, type: "cube"}
 ]
 
-let processed_numbers = numbers_pair.map(number => {
-    if(number.type == "square") {
-        return number.number * number.number;
-    } else {
-        return number.number * number.number *number.number;
+let result2 = numbers_pair.reduce((counter, current) => {
+    if(current.type == "square") {
+        counter += 1;
     }
-});
+    return counter;
+}, 0);
 
-console.log(processed_numbers, numbers_pair);
+console.log(result2);
